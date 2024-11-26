@@ -19,7 +19,13 @@ o descargar directamente
 4. Una vez borrada la carpeta prisma, inicializar la base de datos
 4.1 colocar en la terminal el comando npx prisma init (despues de eso se creara un .env con una cadena de conexion de prueba)
 
-   ![{9926D4CF-9040-4901-8802-BEB58646CC25}](https://github.com/user-attachments/assets/0bc217e6-fed0-4b13-91bc-c60467d86d25)
+   ```
+   datasource db {
+     provider = "postgresql"
+     url      = env("DATABASE_URL")
+     relationMode = "prisma"
+   }
+   ```
 
    Saldra algo asi parecido a la imagen y colocar el esquema de la base de datos abajo de la imagen:
 
@@ -65,7 +71,7 @@ model Order {
 }
 ```
 
-4.2 colocar despues en la terminal npx prisma generate (profe no coloco mi cadena de conexion por que es una variable de entorno a mongo atlas)
+4.2 colocar despues en la terminal npx prisma generate (profe no coloco mi cadena de conexion por que es una variable de entorno a neon.tech)
 
 formato de conexion a la base de datos local 
 
